@@ -30,3 +30,7 @@ target
 # Personal memex (kept local, not pushed)
 CLAUDE.md
 memory/
+
+# Mount artifacts (open file handles on FUSE)
+.fuse_hidden*
+**/.fuse_hidden*
