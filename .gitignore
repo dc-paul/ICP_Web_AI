@@ -34,3 +34,6 @@ memory/
 # Mount artifacts (open file handles on FUSE)
 .fuse_hidden*
 **/.fuse_hidden*
+
+# Wrong site staged in error (May proposal) — real site lives in ~/Sites/Allusion_Claude
+site/
