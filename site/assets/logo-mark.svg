@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Allusion mark">
+  <!-- Compact mark — italic 'a' + Ochre dot. Reduction of the wordmark to a single letter. -->
+  <rect width="200" height="200" fill="#1F3539"/>
+  <g fill="#ECEAE2">
+    <path d="M118 64 Q70 64 70 108 Q70 148 110 148 Q132 148 140 132 L140 148 L160 148 L160 92 Q160 64 124 64 Z M120 86 Q138 86 142 102 L142 122 Q138 130 120 130 Q98 130 98 108 Q98 86 120 86 Z"/>
+  </g>
+  <circle cx="160" cy="52" r="11" fill="#C8932E"/>
+</svg>

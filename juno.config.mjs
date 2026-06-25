@@ -8,8 +8,8 @@ export default defineConfig({
       production: "u4saf-bqaaa-aaaal-as2aq-cai",
     },
     hosting: {
-      source: "dist",
-      predeploy: ["npm run build"],
+      // Serving the static Allusion consolidation site (plain HTML/CSS, no build step).
+      source: "site",
     }
   },
 });
