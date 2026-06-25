@@ -26,7 +26,7 @@ a{color:inherit}
 header{position:sticky;top:0;z-index:50;background:rgba(31,53,57,.96);backdrop-filter:saturate(140%) blur(6px)}
 nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 nav .brand{font-family:var(--serif);font-size:22px;color:var(--bone);letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center}
-.brandlogo{height:26px;width:auto;display:block}
+.brandlogo{height:30px;width:auto;display:block}
 .navtoggle{display:none}
 .hamburger{display:none}
 nav .links{display:flex;gap:26px;align-items:center}
