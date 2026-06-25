@@ -51,7 +51,7 @@ section{padding:92px 0}
 .hero p{font-size:20px;max-width:60ch;margin-top:28px;color:#d7dad6}
 .btn{display:inline-block;margin-top:36px;font-family:var(--grotesk);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--ink);background:var(--ochre);padding:13px 26px;border-radius:2px;text-decoration:none}
 
-h2{font-size:clamp(28px,3.6vw,42px);max-width:20ch}
+h2{font-size:clamp(28px,3.6vw,42px);max-width:32ch}
 .sectionhead h2{margin-bottom:18px}
 
 /* cards */
