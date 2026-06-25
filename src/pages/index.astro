@@ -1,84 +1,149 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Background from "../components/Background.astro";
-import Article from "../components/Article.astro";
-import Hero from "../components/Hero.astro";
-
-import "../styles/global.css";
-
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_SOCIAL_IMAGE } from "../consts";
+import Base from "../layouts/Base.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title={SITE_TITLE}
-      description={SITE_DESCRIPTION}
-      image={SITE_SOCIAL_IMAGE}
-    />
-  </head>
-  <body class="bg-white dark:bg-black">
-    <div class="relative isolate min-h-[100dvh]">
-      <main
-        class="mx-auto max-w-(--breakpoint-2xl) px-8 py-16 md:px-24 [@media(min-height:800px)]:min-h-[calc(100dvh-128px)]"
-      >
-        <h1
-          class="text-5xl font-extrabold md:pt-16 md:text-6xl dark:text-white"
-        >
-          Hello World, here is Allusion
-        </h1>
-
-        <div class="mt-8 grid w-full max-w-2xl grid-cols-2 gap-8">
-          <Hero
-            href="https://juno.build/docs/add-juno-to-an-app/create-a-satellite"
-            ariaLabel="Discover how to create a Satellite and deploy your project to production"
-          >
-            Not yet live? Launch your Satellite
-          </Hero>
-
-          <Article
-            href="https://juno.build/docs/guides/astro"
-            ariaLabel="Open quickstart guides on Juno's website"
-          >
-            <Fragment slot="title">Quickstart</Fragment>
-
-            Discover how to use Astro with Juno.
-          </Article>
-
-          <Article
-            href="https://juno.build/docs/category/build"
-            ariaLabel="Open the list of features for building apps on Juno's website"
-          >
-            <Fragment slot="title">Documentation</Fragment>
-
-            Learn how Juno works and start building rich features.
-          </Article>
-
-          <Article
-            href="https://juno.build/docs/guides/github-actions"
-            ariaLabel="Open the guide to setting up GitHub Actions for Juno"
-          >
-            <Fragment slot="title">Continuous Integration</Fragment>
-
-            Automate your deployment with GitHub Actions.
-          </Article>
-
-          <Article
-            href="https://discord.gg/wHZ57Z2RAG"
-            ariaLabel="Join Juno's Discord channel for questions or to share the fun"
-          >
-            <Fragment slot="title">Community</Fragment>
-
-            Come say hi to our amazing Discord community. ❤️
-          </Article>
-        </div>
-      </main>
-
-      <Footer />
-
-      <Background />
+<Base
+  lang="en"
+  title="Allusion — the infrastructure of better networks"
+  description="Allusion finances, builds and operates the infrastructure of better networks — from Internet Computer nodes to AI compute — and backs early-stage founders rebuilding foundational systems. Ghent, Belgium."
+  path="/"
+>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Allusion · Ghent, Belgium · Est. 2021</span>
+      <h1>We finance, build and operate the infrastructure of <span class="accent">better</span> networks.</h1>
+      <p>From Internet Computer nodes to AI compute, and from first-cheque venture capital to the founders rebuilding foundational systems — Allusion backs the layer most people never see, but everything runs on.</p>
+      <a class="btn" href="#contact">Let's talk →</a>
     </div>
-  </body>
-</html>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section class="petrol" id="infra">
+    <div class="wrap">
+      <span class="snum">§ 01 — Infrastructure</span>
+      <div class="sectionhead"><h2>The layer everything runs on.</h2></div>
+      <p class="lead">Networks run on hardware. We finance it, deploy it in top-tier data centers, and keep it running — for decentralized protocols and for the AI workloads reshaping every industry.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Internet Computer node provider</h3>
+          <p>Allusion was the first Belgian node provider for the Internet Computer. We run industrial server hardware in top-tier data centers to guarantee maximum availability for a blockchain-based extension of the public internet.</p>
+        </div>
+        <div class="card">
+          <h3>Server &amp; AI/GPU compute</h3>
+          <p>We finance and deploy general-purpose server and GPU infrastructure — the compute behind AI workloads and future-proof networks at scale.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud Engines <span class="tag">Coming</span></h3>
+          <p>Managed compute engines, built by our operating brand Aviate Labs. The next layer of the stack.</p>
+        </div>
+      </div>
+      <div class="brandstrip">
+        <img src="/assets/aviate-labs.png" alt="Aviate Labs" />
+        <p><b class="lbl">Aviate Labs</b> — our infrastructure-operations arm: node monitoring (NMaaS), reliability tooling for decentralized networks, and the R&amp;D behind Cloud Engines. <a class="moreinfo" href="https://aviatelabs.co" target="_blank" rel="noopener">aviatelabs.co →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section id="ventures">
+    <div class="wrap">
+      <span class="snum">§ 02 — Ventures</span>
+      <div class="sectionhead"><h2>A sparring partner, <span class="accent">not</span> a passenger.</h2></div>
+      <p class="lead">Allusion Ventures backs early-stage founders re-architecting foundational systems — in digital infrastructure, health tech and energy. We write first cheques and stay close.</p>
+      <p class="ticket">First cheques of <b>€50k–€400k</b>, follow-ons up to <b>€5M</b>. Pre-seed and seed. Europe-first, globally curious.</p>
+
+      <div class="sectorlbl">Digital Infrastructure</div>
+      <div class="logos">
+        <a class="logo" href="https://internetcomputer.org" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/dfinity.svg" alt="DFINITY" /><div class="nm">Internet Computer / DFINITY</div><div class="ds">The sovereign cloud for autonomous software.</div></a>
+        <a class="logo" href="https://www.settlemint.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/settlemint.svg" alt="SettleMint" /><div class="nm">SettleMint</div><div class="ds">The OS for institutional tokenization.</div></a>
+        <a class="logo" href="https://tokenize.it" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/tokenize.svg" alt="Tokenize.it" /><div class="nm">Tokenize.it</div><div class="ds">The digital standard for startup equity.</div></a>
+        <a class="logo" href="https://www.profila.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/profila.webp" alt="Profila" /><div class="nm">Profila</div><div class="ds">The zero-party engagement platform.</div></a>
+        <a class="logo" href="https://www.ringtime.ai" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/ringtime.svg" alt="Ringtime" /><div class="nm">Ringtime</div><div class="ds">Blue-collar recruitment, automated.</div></a>
+        <a class="logo" href="https://exhibitly.ai" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/exhibitly.svg" alt="Exhibitly" /><div class="nm">Exhibitly</div><div class="ds">From event website to event intelligence.</div></a>
+      </div>
+
+      <div class="sectorlbl">Health Tech</div>
+      <div class="logos">
+        <a class="logo" href="https://innocens.be" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/innocens.svg" alt="Innocens" /><div class="nm">Innocens</div><div class="ds">Predictive intelligence for new life.</div></a>
+        <a class="logo" href="https://www.umahealth.care" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/uma.webp" alt="Uma Health" /><div class="nm">Uma Health</div><div class="ds">Precision support for (peri)menopause.</div></a>
+        <a class="logo" href="https://exrgame.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/exr.svg" alt="EXR" /><div class="nm">EXR</div><div class="ds">Indoor rowing with virtual worlds.</div></a>
+      </div>
+
+      <div class="sectorlbl">Energy</div>
+      <div class="logos">
+        <a class="logo" href="https://www.azabattery.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/aza.webp" alt="AZA Battery" /><div class="nm">AZA Battery</div><div class="ds">Safe, long-duration zinc-air storage.</div></a>
+        <a class="logo" href="https://genvision.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/genvision.webp" alt="Genvision" /><div class="nm">Genvision</div><div class="ds">The AI suite for carbon markets.</div></a>
+        <a class="logo" href="https://eoly-energy.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/eoly.webp" alt="EOLY" /><div class="nm">EOLY</div><div class="ds">Cooperatively owned wind energy.</div></a>
+      </div>
+
+      <p style="margin-top:38px"><a class="moreinfo" href="https://allusion.ventures" target="_blank" rel="noopener">See the full portfolio → allusion.ventures</a></p>
+    </div>
+  </section>
+
+  <!-- BEYOND VENTURES -->
+  <section class="petrol" id="beyond">
+    <div class="wrap">
+      <span class="snum">§ 03 — Beyond ventures</span>
+      <div class="sectionhead"><h2>Projects with a <span class="accent">societal</span> purpose.</h2></div>
+      <p class="lead">Beyond the venture portfolio, Allusion backs cooperative and community ventures we believe in for reasons that aren't only financial.</p>
+      <div class="logos" style="margin-top:40px">
+        <a class="logo" href="https://www.wooncoop.be" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/wooncoop.png" alt="wooncoop" /><div class="nm">wooncoop</div><div class="ds">Cooperative, fair and sustainable housing.</div></a>
+        <a class="logo" href="https://cohousingprojects.com" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/cohousingprojects.png" alt="Cohousing Projects" /><div class="nm">Cohousing Projects</div><div class="ds">Developing and guiding cohousing communities.</div></a>
+        <a class="logo" href="https://abbeyfieldvlaanderen.be" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/abbeyfield.png" alt="Abbeyfield" /><div class="nm">Abbeyfield</div><div class="ds">Small-scale co-housing for people 55+.</div></a>
+        <a class="logo" href="https://greenpowerbenelux.org/en/" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/greenpower.png" alt="Greenpower Benelux" /><div class="nm">Greenpower Benelux</div><div class="ds">STEM through building &amp; racing electric cars.</div></a>
+        <a class="logo" href="https://woodstockcoop.be" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/woodstock.png" alt="WoodStock" /><div class="nm">WoodStock</div><div class="ds">A cooperative, local &amp; circular timber chain.</div></a>
+        <a class="logo" href="https://murfy.fr" target="_blank" rel="noopener"><img class="logoimg" src="/assets/logos/murfy.webp" alt="MURFY" /><div class="nm">MURFY</div><div class="ds">Extending the life of home appliances.</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ICP BELGIUM -->
+  <section id="icpbe">
+    <div class="wrap">
+      <span class="snum">§ 04 — Community</span>
+      <div class="sectionhead"><h2>We help power the Internet Computer community in <span class="accent">Belgium</span>.</h2></div>
+      <p class="lead">Through ICP Belgium, we organize the country's recurring gatherings for the Internet Computer ecosystem — monthly meetups, speaker evenings and hackathons connecting developers, founders and the curious to a decentralized world-computing infrastructure.</p>
+      <p style="margin-top:30px"><a class="moreinfo" href="https://luma.com/user/ICP_Belgium" target="_blank" rel="noopener">See upcoming ICP Belgium events →</a></p>
+    </div>
+  </section>
+
+  <!-- NODENAYSTEEN HUB -->
+  <section class="petrol" id="hub">
+    <div class="wrap">
+      <span class="snum">§ 05 — The hub</span>
+      <div class="sectionhead"><h2>Find us at <span class="accent">Nodenaysteen</span>.</h2></div>
+      <p class="lead">Allusion is based at Nodenaysteen, a mini art-&amp;-tech hub on the Predikherenlei in the heart of Ghent. Since 2021 it has grown into a place for coworking, creation, incubation and artist residencies — where technology, art and social engagement meet. It's home to a small cluster of ventures and organizations:</p>
+      <div class="resid">
+        <div class="card"><h3 style="font-size:19px">Allusion</h3><p>Infrastructure, ventures &amp; community — this site.</p></div>
+        <div class="card"><h3 style="font-size:19px">Brontide Partners</h3><p>Investment vehicle for compute &amp; GPU infrastructure. <a class="moreinfo" href="https://brontide.partners" target="_blank" rel="noopener">brontide.partners →</a></p></div>
+        <div class="card"><h3 style="font-size:19px">Internet Computer Belgium</h3><p>The ICP community &amp; events. <a class="moreinfo" href="https://luma.com/user/ICP_Belgium" target="_blank" rel="noopener">events →</a></p></div>
+        <div class="card"><h3 style="font-size:19px">DeNode</h3><p>Art foundation &amp; exhibition programme. <a class="moreinfo" href="https://denode.be" target="_blank" rel="noopener">denode.be →</a></p></div>
+      </div>
+      <p class="lead" style="margin-top:34px;font-size:16px">Predikherenlei 4, 9000 Gent · by appointment.</p>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <div class="wrap">
+      <span class="snum">§ 06 — News</span>
+      <div class="sectionhead"><h2>Recent.</h2></div>
+      <div class="news">
+        <div class="item"><h3>Extra hardware deployed — with Brontide</h3><p>Allusion deployed additional hardware infrastructure in partnership with Brontide. Want to know more? <a class="moreinfo" href="#contact">Get in touch.</a></p></div>
+        <div class="item"><h3>New investment — Exhibitly</h3><p>We backed Exhibitly, turning event websites into event intelligence.</p></div>
+        <div class="item"><h3>Monthly ICP meetups</h3><p>Internet Computer Belgium meets every month — open to all. <a class="moreinfo" href="https://luma.com/user/ICP_Belgium" target="_blank" rel="noopener">Join →</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="petrol contact" id="contact">
+    <div class="wrap">
+      <span class="snum">§ 07 — Contact</span>
+      <h2>Building something <span class="accent">foundational</span>? Let's talk.</h2>
+      <p class="lead">Reach us at <a href="mailto:info@allusion.be" style="border-bottom:2px solid var(--ochre)">info@allusion.be</a> — Predikherenlei 4, 9000 Gent, Belgium. By appointment.</p>
+      <a class="btn" href="mailto:info@allusion.be">Contact us →</a>
+    </div>
+  </section>
+</Base>

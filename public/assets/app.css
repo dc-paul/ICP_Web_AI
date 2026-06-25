@@ -1,0 +1,124 @@
+/* ============================================================
+   Allusion — design system (Mazois / Pompeii 5-token palette)
+   Single source of truth. Change a hex here = whole site updates.
+   Shared by EN (/) + NL (/nl/) + FR (/fr/).
+   ============================================================ */
+:root{
+  --petrol:#1F3539;
+  --bone:#ECEAE2;
+  --ochre:#C8932E;
+  --ink:#0F0E0C;
+  --slate:#6F7C8A;
+  --serif:'Newsreader',Georgia,serif;
+  --grotesk:'Hanken Grotesk',system-ui,sans-serif;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);color:var(--ink);background:var(--bone);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--grotesk);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.08}
+.accent{color:var(--ochre);font-style:italic}
+a{color:inherit}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(31,53,57,.96);backdrop-filter:saturate(140%) blur(6px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .brand{font-family:var(--serif);font-size:22px;color:var(--bone);letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center}
+.brandlogo{height:26px;width:auto;display:block}
+.navtoggle{display:none}
+.hamburger{display:none}
+nav .links{display:flex;gap:26px;align-items:center}
+nav .links a{font-family:var(--grotesk);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--bone);text-decoration:none;opacity:.85}
+nav .links a:hover{opacity:1}
+.lang{font-family:var(--grotesk);font-weight:600;font-size:12px;letter-spacing:.08em;border:1px solid rgba(236,234,226,.3);border-radius:2px;overflow:hidden;display:inline-flex}
+.lang a{padding:5px 9px;color:var(--bone);text-decoration:none;opacity:.6}
+.lang a:hover{opacity:.9}
+.lang a.on{background:var(--ochre);color:var(--ink);opacity:1}
+
+/* sections */
+section{padding:92px 0}
+.snum{font-family:var(--grotesk);font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--slate);text-transform:uppercase;margin-bottom:22px;display:block}
+.lead{font-size:20px;max-width:760px}
+.petrol{background:var(--petrol);color:var(--bone)}
+.petrol .lead,.petrol h2,.petrol h3{color:var(--bone)}
+.petrol .snum{color:#9fb0b3}
+
+/* hero */
+.hero{background:var(--petrol);color:var(--bone);padding:120px 0 110px}
+.hero h1{font-size:clamp(38px,6vw,76px);max-width:14ch;margin-top:22px}
+.hero p{font-size:20px;max-width:60ch;margin-top:28px;color:#d7dad6}
+.btn{display:inline-block;margin-top:36px;font-family:var(--grotesk);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--ink);background:var(--ochre);padding:13px 26px;border-radius:2px;text-decoration:none}
+
+h2{font-size:clamp(28px,3.6vw,42px);max-width:20ch}
+.sectionhead h2{margin-bottom:18px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.card{border:1px solid rgba(111,124,138,.35);border-radius:3px;padding:28px}
+.petrol .card{border-color:rgba(236,234,226,.18)}
+.card h3{font-size:23px;margin-bottom:12px}
+.card p{font-size:15.5px;color:var(--slate)}
+.petrol .card p{color:#bcc4c3}
+.tag{display:inline-block;font-family:var(--grotesk);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);border:1px solid var(--ochre);border-radius:999px;padding:3px 9px;margin-left:8px;vertical-align:middle}
+.brandstrip{margin-top:30px;border-top:1px solid rgba(236,234,226,.18);padding-top:26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.brandstrip img{height:30px;width:auto}
+.brandstrip .lbl{font-family:var(--grotesk);font-weight:700;font-size:15px;color:var(--bone)}
+.brandstrip p{font-size:14.5px;color:#bcc4c3;max-width:60ch}
+
+/* ventures / logo grids */
+.sectorlbl{font-family:var(--grotesk);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin:34px 0 16px}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.logo{border:1px solid rgba(15,14,12,.16);border-radius:3px;padding:18px 20px;background:#fff;text-decoration:none;display:block}
+.logo .logoimg{height:30px;width:auto;max-width:62%;margin-bottom:12px;object-fit:contain;object-position:left}
+.logo .nm{font-family:var(--grotesk);font-weight:700;font-size:15px;color:var(--ink)}
+.logo .ds{font-size:14px;color:var(--slate);margin-top:4px}
+.logo:hover{border-color:var(--ochre)}
+.ticket{font-family:var(--grotesk);font-weight:500;font-size:15px;color:var(--ink);margin-top:10px}
+.ticket b{font-weight:700}
+.moreinfo{font-family:var(--grotesk);font-weight:600;font-size:14px;letter-spacing:.03em;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ochre);padding-bottom:2px}
+.petrol .moreinfo{color:var(--bone)}
+
+/* hub residents + news */
+.resid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.news .item{border-left:2px solid var(--ochre);padding-left:18px}
+.news h3{font-size:20px;margin-bottom:8px}
+.news p{font-size:15px;color:var(--slate)}
+
+/* contact + footer */
+.contact h2{margin-bottom:18px}
+footer{background:var(--ink);color:var(--bone);padding:48px 0;font-family:var(--grotesk);font-size:13.5px}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;color:#b9bbb7}
+footer a{color:var(--bone);text-decoration:none;opacity:.85}
+footer a:hover{opacity:1}
+
+@media(max-width:860px){
+  section{padding:62px 0}
+  .hero{padding:92px 0 70px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:18px}
+  h2{font-size:27px}
+  .lead{font-size:18px}
+  .cards{grid-template-columns:1fr;gap:16px}
+  .resid,.news{grid-template-columns:1fr}
+  .logos{grid-template-columns:repeat(2,1fr)}
+  .brandlogo{height:24px}
+
+  /* mobile nav: hamburger + dropdown */
+  .hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .hamburger span{display:block;height:2px;width:23px;background:var(--bone);border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+  nav .links{position:absolute;top:64px;left:0;right:0;width:100%;background:var(--petrol);flex-direction:column;align-items:stretch;gap:0;max-height:0;overflow:hidden;transition:max-height .3s ease;border-top:1px solid rgba(236,234,226,.12)}
+  .navtoggle:checked ~ .links{max-height:360px}
+  nav .links a{padding:15px 28px;font-size:15px;opacity:.95;border-bottom:1px solid rgba(236,234,226,.08)}
+  nav .links .lang{margin:16px 28px;width:max-content}
+  .navtoggle:checked ~ .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .navtoggle:checked ~ .hamburger span:nth-child(2){opacity:0}
+  .navtoggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:470px){
+  .wrap{padding:0 20px}
+  .logos{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+}

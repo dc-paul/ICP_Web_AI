@@ -3,13 +3,11 @@ import { defineConfig } from "@junobuild/config";
 /** @type {import('@junobuild/config').JunoConfig} */
 export default defineConfig({
   satellite: {
-    // NOTE: satellite u4saf-bqaaa-aaaal-as2aq-cai now hosts the live allusion.be
-    // site, deployed from the ~/Sites/Allusion_Claude repo (dc-paul/allusion_be).
-    // This project (ICP_Web_AI) is the Juno/Astro experiment; give it its own
-    // satellite before deploying so it doesn't overwrite allusion.be.
+    // allusion.be runs here as an Astro site on Juno (Internet Computer).
+    // `juno deploy` runs the Astro build (predeploy) then uploads dist/.
     ids: {
       development: "<DEV_SATELLITE_ID>",
-      production: "<PROD_SATELLITE_ID>",
+      production: "u4saf-bqaaa-aaaal-as2aq-cai",
     },
     hosting: {
       source: "dist",
