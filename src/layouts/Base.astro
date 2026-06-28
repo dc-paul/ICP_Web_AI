@@ -27,11 +27,14 @@ const footerLead = {
   fr: "© 2026 Allusion BV · Gand, Belgique · ",
 }[lang];
 
-const junoLabel = {
-  en: "Now running on ICP via Juno",
-  nl: "Draait nu op ICP via Juno",
-  fr: "Tourne désormais sur ICP via Juno",
+const hosting = {
+  en: { pre: "This website is hosted on the ", mid: " network via ", post: "." },
+  nl: { pre: "Deze website wordt gehost op het ", mid: "-netwerk via ", post: "." },
+  fr: { pre: "Ce site web est hébergé sur le réseau ", mid: " via ", post: "." },
 }[lang];
+
+const icpLabel = "Internet Computer (ICP)";
+const junoLink = "Juno";
 
 const canonical = `https://allusion.be${path}`;
 ---
@@ -93,7 +96,7 @@ const canonical = `https://allusion.be${path}`;
       <div class="wrap">
         <div class="row">
           <span
-            >{footerLead}<a href="https://juno.build" target="_blank" rel="noopener">{junoLabel}</a></span
+            >{footerLead}{hosting.pre}<a href="https://internetcomputer.org" target="_blank" rel="noopener">{icpLabel}</a>{hosting.mid}<a href="https://juno.build" target="_blank" rel="noopener">{junoLink}</a>{hosting.post}</span
           >
           <span
             ><a href="https://allusion.ventures" target="_blank" rel="noopener">allusion.ventures</a>
