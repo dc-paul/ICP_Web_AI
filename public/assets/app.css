@@ -71,7 +71,7 @@ h2{font-size:clamp(28px,3.6vw,42px);max-width:32ch}
 .sectorlbl{font-family:var(--grotesk);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin:34px 0 16px}
 .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .logo{border:1px solid rgba(15,14,12,.16);border-radius:3px;padding:18px 20px;background:#fff;text-decoration:none;display:block}
-.logo .logoimg{height:30px;width:auto;max-width:62%;margin-bottom:12px;object-fit:contain;object-position:left}
+.logo .logoimg{height:30px;width:auto;max-width:62%;margin-bottom:12px;object-fit:contain;object-position:right;display:block;margin-left:auto;margin-right:0}
 .logo .nm{font-family:var(--grotesk);font-weight:700;font-size:15px;color:var(--ink)}
 .logo .ds{font-size:14px;color:var(--slate);margin-top:4px}
 .logo:hover{border-color:var(--ochre)}
